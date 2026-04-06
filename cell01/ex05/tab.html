@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 05: Tab</title>
+    <style>
+        /* ตั้งค่าตารางให้มีขอบและขนาดตามรูป */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* ให้เส้นขอบติดกัน */
+            border: 1px solid black;   /* เส้นขอบนอกสุด */
+        }
+
+        td {
+            height: 100px;             /* กำหนดความสูงของกล่อง */
+            border: 1px solid black;   /* เส้นขอบระหว่างช่อง */
+            padding: 10px;             /* ระยะห่างข้อความจากขอบ */
+            vertical-align: middle;    /* จัดข้อความให้อยู่กึ่งกลางแนวตั้ง */
+        }
+
+        /* กำหนดสีของแต่ละช่องตามโจทย์ */
+        .first-cell {
+            background-color: #8da34b; /* สีเขียวขี้ม้า */
+            width: 50%;
+        }
+
+        .second-cell {
+            background-color: #d99a82; /* สีส้มอิฐอ่อน */
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td class="first-cell">First cell</td>
+            <td class="second-cell">Second cell</td>
+        </tr>
+    </table>
+
+</body>
+</html>
