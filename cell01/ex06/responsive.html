@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 06: Responsive</title>
+    <style>
+        /* ล้างค่า margin/padding ของหน้าเว็บเพื่อให้ตารางเต็มหน้าจอจริงๆ */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* ตั้งค่าตารางให้ยืดตามขนาดหน้าจอ */
+        table {
+            width: 100%;        /* กว้างเต็มหน้าจอ */
+            height: 100vh;      /* สูงเต็มหน้าจอ (Viewport Height) */
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        /* กำหนดสีพื้นหลัง (อิงจากข้อ 05) */
+        .first-cell {
+            background-color: #8da34b;
+            width: 50%; /* ใช้ % เพื่อให้แบ่งครึ่งตลอดเวลาไม่ว่าจอจะเล็กหรือใหญ่ */
+        }
+
+        .second-cell {
+            background-color: #d99a82;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td class="first-cell">First cell</td>
+            <td class="second-cell">Second cell</td>
+        </tr>
+    </table>
+
+</body>
+</html>
