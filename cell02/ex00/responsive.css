@@ -1,0 +1,31 @@
+/* ล้างค่าขอบของ Browser */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* ตั้งค่าตารางให้ยืดหดตามหน้าจอ (Responsive) */
+table {
+    width: 100%;           /* กว้างเต็มหน้าจอ */
+    height: 100vh;         /* สูงเต็มหน้าจอ */
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 2vw;        /* ขนาดตัวอักษรยืดหดตามความกว้างหน้าจอ */
+}
+
+/* กำหนดสีตามโจทย์เดิม */
+.first-cell {
+    background-color: #8da34b;
+    width: 50%;
+}
+
+.second-cell {
+    background-color: #d99a82;
+    width: 50%;
+}
