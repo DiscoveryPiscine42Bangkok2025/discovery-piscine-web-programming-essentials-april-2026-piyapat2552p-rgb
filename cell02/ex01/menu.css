@@ -1,0 +1,63 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+/* แถบเมนูหลัก (Sandwich Bread - ด้านบน) */
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #002639; /* สีน้ำเงินเข้มแบบรถไฟ SNCF */
+    border-radius: 8px;
+}
+
+.nav-item {
+    position: relative; /* เพื่อให้เมนูย่อยอ้างอิงตำแหน่งได้ */
+    display: inline-block;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background-color: #0082c3; /* สีฟ้าสว่างเวลาเอาเมาส์วาง */
+}
+
+/* เมนูย่อย (The Fillings - ไส้แซนด์วิชที่ซ่อนอยู่) */
+.dropdown-content {
+    display: none;        /* ซ่อนไว้ก่อน */
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+.dropdown-content li a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* ส่วนสำคัญ: เมื่อเอาเมาส์วางที่ .nav-item ให้แสดง .dropdown-content */
+.nav-item:hover .dropdown-content {
+    display: block;
+}
