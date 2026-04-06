@@ -1,0 +1,59 @@
+/* ล้างค่าขอบหน้าจอ */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* ตั้งค่าพื้นฐานสำหรับส่วนที่เป็น Parallax (ภาพพื้นหลัง) */
+.parallax {
+    /* กำหนดให้ภาพอยู่นิ่งเมื่อ Scroll */
+    background-attachment: fixed;
+    /* จัดตำแหน่งภาพให้อยู่ตรงกลางและคลุมพื้นที่ */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* กำหนดความสูงให้เต็มหน้าจอ */
+    height: 100vh;
+    
+    /* จัดข้อความให้อยู่กึ่งกลาง */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ภาพที่ 1 */
+.img1 {
+    background-image: url('https://i.pinimg.com/736x/e4/64/b0/e464b0634b3e7553811de589b6debab9.jpg');
+}
+
+/* ภาพที่ 2 (ส่วนท้ายของหน้า) */
+.img2 {
+    background-image: url('https://i.pinimg.com/736x/33/ac/0f/33ac0fed0c601d36a98b9f16f8c9fb10.jpg');
+}
+
+/* ส่วนที่เป็นกล่องสีดำตรงกลาง */
+.black-block {
+    height: 400px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* สไตล์ข้อความใน Parallax */
+.caption {
+    background-color: rgba(0, 0, 0, 0.5); /* พื้นหลังข้อความโปร่งแสง */
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
