@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile Card</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+    <div class="card">
+        <h1>User Profile</h1>
+        
+        <table class="profile-table">
+            <tr>
+                <td>
+                    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+                    
+                    <p class="login-name">Username_01</p>
+                    
+                    <p class="description">Fullstack Developer Student</p>
+                    
+                    <div class="social-links">
+                        <img src="https://via.placeholder.com/30" alt="FB">
+                        <img src="https://via.placeholder.com/30" alt="IG">
+                        <img src="https://via.placeholder.com/30" alt="X">
+                    </div>
+                    
+                    <button class="contact-btn">Contact</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

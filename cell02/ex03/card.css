@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 250px;
+}
+
+/* An invisible table: กำหนดเส้นขอบเป็น none */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none; 
+}
+
+.profile-table td {
+    border: none;
+    padding: 10px 0;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.login-name {
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+.description {
+    font-size: 0.9em;
+    color: gray;
+    margin: 0;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.contact-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
