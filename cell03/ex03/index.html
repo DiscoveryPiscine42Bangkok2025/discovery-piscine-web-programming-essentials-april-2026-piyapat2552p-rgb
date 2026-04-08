@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do or not to do</title>
+    <style>
+        /* ตกแต่งพื้นฐาน */
+        body { font-family: sans-serif; padding: 20px; }
+        #ft_list { margin-top: 20px; border: 1px solid #ccc; min-height: 50px; }
+        #ft_list div { 
+            padding: 10px; 
+            border-bottom: 1px solid #eee; 
+            cursor: pointer; 
+            background: #f9f9f9;
+        }
+        #ft_list div:hover { background: #fee; }
+    </style>
+</head>
+<body>
+
+    <button id="new_btn">New</button>
+    
+    <div id="ft_list"></div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
