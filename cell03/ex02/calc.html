@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's over 9000</title>
+    <style>
+        /* ตกแต่งเล็กน้อยเพื่อให้ดูเหมือนเครื่องคิดเลข */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .calculator-container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        input, select {
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-container">
+        <input type="text" id="leftMember" placeholder="Left value">
+
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+
+        <input type="text" id="rightMember" placeholder="Right value">
+
+        <input type="submit" value="Try me!" onclick="calculate()">
+    </div>
+
+    <script>
+        // ฟังก์ชันคำนวณหลัก
+        function calculate() {
+            const leftStr = document.getElementById('leftMember').value;
+            const rightStr = document.getElementById('rightMember').value;
+            const operator = document.getElementById('operator').value;
+
+            // ตรวจสอบว่าเป็นตัวเลขจำนวนเต็มบวก (>= 0) หรือไม่
+            // ใช้ Regex เพื่อเช็คว่าเป็นตัวเลขล้วนๆ
+            if (!/^\d+$/.test(leftStr) || !/^\d+$/.test(rightStr)) {
+                alert('Error :(');
+                return;
+            }
+
+            const left = parseInt(leftStr);
+            const right = parseInt(rightStr);
+            let result;
+
+            // ตรวจสอบการหารหรือ modulo ด้วยศูนย์
+            if ((operator === '/' || operator === '%') && right === 0) {
+                const msg = "It's over 9000!";
+                alert(msg);
+                console.log(msg);
+                return;
+            }
+
+            // ดำเนินการคำนวณ
+            switch (operator) {
+                case '+': result = left + right; break;
+                case '-': result = left - right; break;
+                case '*': result = left * right; break;
+                case '/': result = left / right; break;
+                case '%': result = left % right; break;
+            }
+
+            // แสดงผลลัพธ์
+            alert(result);
+            console.log(result);
+        }
+
+        // ตั้งเวลาแจ้งเตือนทุกๆ 30 วินาที
+        setInterval(function() {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+
+</body>
+</html>
