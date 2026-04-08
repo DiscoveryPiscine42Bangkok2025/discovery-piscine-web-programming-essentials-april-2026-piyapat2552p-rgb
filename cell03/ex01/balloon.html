@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explode this balloon</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* สร้างลูกโป่งเริ่มต้น 200x200 สีแดง วงกลม */
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s; /* เพื่อให้สีเปลี่ยนนุ่มนวลขึ้น */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="balloon"></div>
+
+    <script>
+        const balloon = document.getElementById('balloon');
+        let size = 200;
+        const colors = ['red', 'green', 'blue'];
+        let colorIndex = 0;
+
+        // ฟังก์ชันอัปเดตหน้าตาของลูกโป่ง
+        function updateBalloon() {
+            balloon.style.width = size + 'px';
+            balloon.style.height = size + 'px';
+            balloon.style.backgroundColor = colors[colorIndex];
+        }
+
+        // 1. เมื่อคลิก (Click)
+        balloon.addEventListener('click', function() {
+            size += 10; // เพิ่มขนาด 10px
+            
+            // เปลี่ยนสีตามลำดับ: red -> green -> blue -> red
+            colorIndex = (colorIndex + 1) % colors.length;
+
+            // ถ้าขนาดเกิน 420px ให้ระเบิด (กลับไปค่าเริ่มต้น)
+            if (size > 420) {
+                size = 200;
+                colorIndex = 0; // กลับไปสีแดง
+            }
+            updateBalloon();
+        });
+
+        // 2. เมื่อเมาส์ออกจากลูกโป่ง (Mouse Leave)
+        balloon.addEventListener('mouseleave', function() {
+            // ลดขนาดลง 5px แต่ห้ามต่ำกว่า 200px
+            if (size > 200) {
+                size -= 5;
+            }
+
+            // เปลี่ยนสีแบบย้อนกลับ: red -> blue -> green -> red
+            colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+            
+            updateBalloon();
+        });
+    </script>
+
+</body>
+</html>
