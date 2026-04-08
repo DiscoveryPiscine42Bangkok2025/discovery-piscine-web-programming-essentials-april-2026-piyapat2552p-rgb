@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Piyapat Jaiyen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-pink: #FFB6C1;
+            --dark-pink: #FF69B4;
+            --bg-white: #FFFFFF;
+            --text-dark: #000000;
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Kanit', 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        .fixed-navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #fb92b3;
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+        }
+
+        .fixed-navbar a {
+            text-decoration: none;
+            color: var(--text-dark);
+            margin: 0 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .fixed-navbar a:hover {
+            color: var(--dark-pink);
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 900px;
+            margin: 100px auto 50px;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .profile-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--primary-pink);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .nickname {
+            color: var(--dark-pink);
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        /* Section Styling */
+        .portfolio-section {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #fdf2f4;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-header {
+            color: var(--dark-pink);
+            border-bottom: 2px solid var(--primary-pink);
+            display: inline-block;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+
+        /* Education & Skills Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid { grid-template-columns: 1fr; }
+        }
+
+        .badge {
+            background: var(--primary-pink);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Buttons */
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn-contact {
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: white;
+            border: 2px solid var(--primary-pink);
+            color: var(--dark-pink);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-contact:hover {
+            background: var(--primary-pink);
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 182, 193, 0.4);
+        }
+
+        .kmitl-focus {
+            background: #fff5f6;
+            padding: 15px;
+            border-left: 5px solid #FF6347;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed-navbar">
+        <a href="index.html">HOME</a>
+        <a href="#about">PERSONAL MATTERS</a>
+        <a href="#education">EDUCATION</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#certificate">CERTIFICATE</a>
+    </nav>
+
+    <div class="container">
+        <header class="profile-header">
+            <img src="https://i.ibb.co/ch6L0Ws8/665195258-1055041621029310-5605435231051504177-n.jpg" alt="หนูดี" class="profile-img">
+            <h1 class="main-title">ณถัทร วิจิตรวงศ์</h1>
+            <span class="nickname">" NUDEE"</span>
+        </header>
+
+        <section id="about" class="portfolio-section">
+            <h2 class="section-header">เป้าหมายทางการศึกษา</h2>
+            <p>มีความตั้งใจอย่างแรงกล้าในการเข้าศึกษาต่อที่ <strong>คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมอุตสากหาร สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (KMITL)</strong></p>
+            <div class="kmitl-focus">
+                📍 ฉันอยากพัฒนาตัวเองให้เต็มที่ในทุกด้าน เรียนรู้จากประสบการณ์
+                 ใช้ชีวิตในแต่ละวันอย่างมีความสุข กล้าลองสิ่งใหม่ๆ เตรียมตัวให้พร้อมสำหรับโอกาสเสมอ
+            </div>
+        </section>
+
+        <section id="education" class="portfolio-section">
+            <h2 class="section-header">การศึกษา</h2>
+            <p><strong>มัธยมศึกษาปีที่ 6 (สายการเรียนวิทย์-คณิต)</strong></p>
+            <p>โรงเรียนมาเรียลัย</p>
+            <div style="margin-top: 15px;">
+                <span class="badge">MC OF MRL</span>
+                        <span class="badge">Canva</span>
+                        <span class="badge">CHINESE</span>
+                        <span class="badge">Teamwork</span>
+                        <span class="badge">Communication</span>
+            </div>
+        </section>
+
+        <section id="contact" class="portfolio-section">
+            <h2 class="section-header">ช่องทางการติดต่อ</h2><section id="activities" class="portfolio-section">
+                
+            <div class="contact-grid">
+                <a href="https://www.instagram.com/nyuv00?igsh=MWoxanZxbzdqbThxOQ%3D%3D&utm_source=qr" target="_blank" class="btn-contact">Instagram: nyuv00</a>
+                <a href="mailto:nudeewichitwong@gmail.com" class="btn-contact">Email</a>
+                <a href="tel:0973482296" class="btn-contact">Tel: 097-348-2296</a>
+                <a href="https://github.com/DiscoveryPiscine42Bangkok2025/discovery-piscine-web-programming-essentials-april-2026-NuD555-1" target="_blank" class="btn-contact">GitHub Project</a>
+            </div>
+        </section>
+    
+    <section id="certificate" class="portfolio-section">
+            <h2 class="section-header">กิจกรรมและเกียรติบัตร</h2>
+                
+            <div class="activity-item">
+                <div class="activity-media">
+                <img src="https://i.ibb.co/4n8Q87r6/IMG-1619.webp" alt="เกียรติบัตรworkshop kmitl" class="activity-img">
+                </div>
+                <div class="activity-info">
+                    <h3>ผ่านการเข้าร่วมกิจกรรม K-ENGINEERING WORLD TOUR AND WORKSHOP 2025</h3>
+                    <div class="activity-date">3 สิงหาคม 2568 |</div>
+                    <p>ได้รับใบประกาศนียบัตรผ่านการอบรมหลักสูตรพื้นฐานการเขียนโปรแกรม (Web Programming Essentials) พร้อมฝึกทักษะการเรียนรู้ด้วยตนเองและการแก้ปัญหาร่วมกัน</p>
+                </div>
+            </div>
+
+            <div class="activity-item">
+                <div class="activity-media">
+                <img src="https://i.ibb.co/G3MT3k0M/IMG-1616.webp" alt="English Test" class="activity-img">
+                </div>
+                <div class="activity-info">
+                    <h3>การสอบวัดทักษะวิชาการระดับชาติ(สวช.) ในวิชาวิทยาศาสตร์</h3>
+                    <div class="activity-date">มกราคม 2026 | โรงเรียนมาเรียลัย</div>
+                    <p>ได้รับรางวัลชมเชย รอบตัวแทนจังหวัด</p>
+                </div>
+            </div>
+
+            </section>
+</body>
+</html>
+     
+       
+        
+     
+                    
+             
+   
