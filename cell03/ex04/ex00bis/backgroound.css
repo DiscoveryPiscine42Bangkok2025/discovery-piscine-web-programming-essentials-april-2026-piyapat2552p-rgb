@@ -1,0 +1,30 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #ffffff; /* พื้นหลังสีขาวตามความชอบของคุณ */
+    transition: background-color 0.3s ease;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffc0cb; /* สีชมพู (Pink) ที่คุณชอบ */
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #ffb1be; /* สีชมพูเข้มขึ้นเล็กน้อยเมื่อวางเมาส์ */
+}
+
+button:active {
+    transform: scale(0.95);
+}

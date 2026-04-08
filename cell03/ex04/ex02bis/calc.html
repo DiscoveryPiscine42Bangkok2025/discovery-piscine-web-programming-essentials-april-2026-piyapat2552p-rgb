@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's over 9000 - jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff; /* พื้นหลังสีขาว */
+            font-family: Arial, sans-serif;
+        }
+        .calculator-container {
+            padding: 20px;
+            border: 2px solid #ffc0cb; /* เปลี่ยนเป็นสีชมพู */
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        input[type="text"], select {
+            margin: 5px;
+            padding: 8px;
+            border: 1px solid #ffc0cb;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            padding: 8px 15px;
+            background-color: #ffc0cb; /* สีชมพู */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-container">
+        <input type="text" id="leftMember" placeholder="Left value">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="rightMember" placeholder="Right value">
+        <input type="submit" id="submitBtn" value="Try me!">
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // ดักจับการคลิกปุ่มผ่าน jQuery แทน onclick
+            $('#submitBtn').on('click', function() {
+                // ใช้ .val() ดึงค่าจาก input
+                const leftStr = $('#leftMember').val();
+                const rightStr = $('#rightMember').val();
+                const operator = $('#operator').val();
+
+                // ตรวจสอบว่าเป็นตัวเลขจำนวนเต็มบวก
+                if (!/^\d+$/.test(leftStr) || !/^\d+$/.test(rightStr)) {
+                    alert('Error :(');
+                    return;
+                }
+
+                const left = parseInt(leftStr);
+                const right = parseInt(rightStr);
+                let result;
+
+                // ตรวจสอบการหารด้วยศูนย์
+                if ((operator === '/' || operator === '%') && right === 0) {
+                    const msg = "It's over 9000!";
+                    alert(msg);
+                    console.log(msg);
+                    return;
+                }
+
+                switch (operator) {
+                    case '+': result = left + right; break;
+                    case '-': result = left - right; break;
+                    case '*': result = left * right; break;
+                    case '/': result = left / right; break;
+                    case '%': result = left % right; break;
+                }
+
+                alert(result);
+                console.log(result);
+            });
+
+            // แจ้งเตือนทุก 30 วินาที
+            setInterval(function() {
+                alert('Please, use me...');
+            }, 30000);
+        });
+    </script>
+
+</body>
+</html>
